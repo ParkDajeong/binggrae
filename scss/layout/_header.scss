@@ -1,0 +1,153 @@
+/* ============ Header ============ */
+.header {
+  &__inner {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 77px;
+    padding: 0 10px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__util {
+    margin-right: auto;
+  }
+
+  &__link-util {
+    position: relative;
+    margin-right: 29px;
+    color: #444;
+    font-weight: 500;
+    letter-spacing: -1px;
+
+    &::before {
+      content: "";
+      background-color: #ccc;
+      position: absolute;
+      top: 6px;
+      right: -16px;
+      display: block;
+      width: 1px;
+      height: 9px;
+    }
+
+    &:last-child::before {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  &__link {
+    background: url(../image/logo_pc.png) no-repeat center center;
+    display: block;
+    width: 128px;
+    height: 32px;
+    padding: 10px;
+  }
+}
+
+.sns-list {
+  display: flex;
+
+  &__link {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin: 0 7px;
+
+    &--insta {
+      background: url(../image/footer_instar.png) no-repeat center;
+    }
+
+    &--youtube {
+      background: url(../image/footer_youtube.png) no-repeat center;
+    }
+  }
+}
+
+.gnb {
+  &__menu {
+    display: flex;
+    justify-content: center;
+
+    &-item {
+      position: relative;
+      width: 160px;
+      min-height: 60px;
+    }
+
+    &-item:hover {
+      .gnb__link-category {
+        color: $color-primary;
+
+        &::before {
+          background-color: $color-primary;
+        }
+      }
+    }
+  }
+
+  &__link-category {
+    position: relative;
+    display: block;
+    height: 100%;
+    font-family: "Binggrae-Bold", sans-serif;
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+    letter-spacing: -1px;
+    transition: 0.1s;
+
+    &::before {
+      content: "";
+      background-color: transparent;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 50px;
+      height: 3px;
+      transform: translateX(-50%);
+      transition: 0.1s;
+    }
+  }
+
+  &__sub-menu {
+    position: absolute;
+    top: 62px;
+    display: none;
+    width: 100%;
+    padding: 22px 0 30px;
+
+    &-item {
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+    }
+  }
+
+  &__link-sub-menu {
+    color: #666;
+    font-size: 16px;
+    font-weight: 300;
+
+    &:hover {
+      color: $color-primary;
+      font-weight: 700;
+    }
+  }
+}
