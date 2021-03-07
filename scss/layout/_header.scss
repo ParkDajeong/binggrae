@@ -78,11 +78,15 @@
     margin: 0 7px;
 
     &--insta {
-      background: url(../image/footer_instar.png) no-repeat center;
+      background: url(../../image/footer_instar.png) no-repeat center;
     }
 
     &--youtube {
-      background: url(../image/footer_youtube.png) no-repeat center;
+      background: url(../../image/footer_youtube.png) no-repeat center;
+    }
+
+    &--kica {
+      background: url(../../image/ico_link_kica.png) no-repeat center;
     }
   }
 }

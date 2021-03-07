@@ -113,10 +113,13 @@ button {
   margin: 0 7px;
 }
 .sns-list__link--insta {
-  background: url(../image/footer_instar.png) no-repeat center;
+  background: url(../../image/footer_instar.png) no-repeat center;
 }
 .sns-list__link--youtube {
-  background: url(../image/footer_youtube.png) no-repeat center;
+  background: url(../../image/footer_youtube.png) no-repeat center;
+}
+.sns-list__link--kica {
+  background: url(../../image/ico_link_kica.png) no-repeat center;
 }
 
 .btn-toggle-menu {
@@ -343,6 +346,109 @@ button {
     display: block;
     font-size: 13px;
     letter-spacing: -1px;
+  }
+  .gnb-mo__link-container {
+    margin: 20px 0;
+  }
+  .gnb-mo__link-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gnb-mo__link-list-item {
+    background-color: #fff;
+    width: 50%;
+    height: 50px;
+    border-top: 1px solid #e3e3e3;
+  }
+  .gnb-mo__link-list-item:nth-child(2n) {
+    border-left: 1px solid #e3e3e3;
+  }
+  .gnb-mo__link-list-item:last-child {
+    width: 100%;
+    border-bottom: 1px solid #e3e3e3;
+  }
+  .gnb-mo__link-etc {
+    display: block;
+    padding-left: 38px;
+    color: #666;
+    letter-spacing: -1px;
+    line-height: 50px;
+  }
+  .gnb-mo__link-etc--customer {
+    background: url(../../image/ico_link_customer.png) no-repeat 18.5px 17px;
+    background-size: 9px 16px;
+  }
+  .gnb-mo__link-etc--road {
+    background: url(../../image/ico_link_road.png) no-repeat 18px 17px;
+    background-size: 12px 16px;
+  }
+  .gnb-mo__link-etc--hiring {
+    background: url(../../image/ico_link_talent.png) no-repeat 18px 17px;
+    background-size: 12px 16px;
+  }
+  .gnb-mo__link-etc--market-sys {
+    background: url(../../image/ico_link_buy.png) no-repeat 15.5px 18.5px;
+    background-size: 16px 14px;
+  }
+  .gnb-mo__link-etc--privacy {
+    padding: 0;
+    text-align: center;
+  }
+  .gnb-mo__footer-menu {
+    background-color: #fff;
+  }
+  .gnb-mo__footer-sub-menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gnb-mo__footer-sub-menu-item {
+    width: 50%;
+    border-bottom: 1px solid #e3e3e3;
+  }
+  .gnb-mo__footer-sub-menu-item:nth-child(odd) {
+    border-right: 1px solid #e3e3e3;
+  }
+  .gnb-mo__link-footer {
+    position: relative;
+    display: block;
+    padding-left: 21px;
+    letter-spacing: -1px;
+    line-height: 50px;
+    border-bottom: 1px solid #e3e3e3;
+  }
+  .gnb-mo__link-footer i::after {
+    content: "";
+    background: url(../../image/gnb_2dep_plus.png) no-repeat center center;
+    background-size: 100%;
+    position: absolute;
+    top: 16.5px;
+    right: 25px;
+    width: 9px;
+    height: 9px;
+  }
+  .gnb-mo__link-footer-sub {
+    display: block;
+    padding-left: 21px;
+    color: #444;
+    font-size: 13px;
+    letter-spacing: -1px;
+    line-height: 50px;
+  }
+  .gnb-mo__sns-list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 66px;
+    padding: 0 35px;
+  }
+  .gnb-mo__sns-list .sns-list__item {
+    width: 33.33333%;
+  }
+  .gnb-mo__sns-list .sns-list__link {
+    width: 28px;
+    width: 28px;
+    margin: 0 auto;
+    background-size: 28px;
   }
 }
 html,
