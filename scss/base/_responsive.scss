@@ -109,5 +109,36 @@
         height: 9px;
       }
     }
+
+    &__last-sub-menu {
+      background-color: #f6f6f6;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 10px 20px;
+
+      &-item {
+        position: relative;
+        width: 50%;
+        padding-left: 17px;
+        margin: 10px 0;
+
+        &::after {
+          content: "";
+          background: url(../../image/gnb_3dep_off.png) no-repeat center;
+          position: absolute;
+          top: 9px;
+          left: 8px;
+          width: 2px;
+          height: 2px;
+        }
+      }
+    }
+
+    &__link-last-sub {
+      display: block;
+      font-size: 13px;
+      letter-spacing: -1px;
+    }
   }
 }
