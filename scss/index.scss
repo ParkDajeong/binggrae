@@ -12,15 +12,21 @@
 
 @import "layout/header";
 
+@import "base/responsive";
+
 html,
 body {
+  background-color: lavender;
   font-family: "Noto Sans KR", sans-serif;
 }
 
 .blind {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
+  display: block;
+  width: 1px;
+  height: 1px;
   color: transparent;
+  font-size: 1px;
+  line-height: 0;
   text-indent: -9999px;
+  overflow: hidden;
 }
