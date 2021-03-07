@@ -229,6 +229,7 @@ button {
 
 /* ============ 반응형 ============ */
 @media screen and (max-width: 767px) {
+  /* Header */
   .header__top {
     height: 44px;
     border-bottom: 1px solid #e3e3e3;
@@ -242,6 +243,9 @@ button {
     display: none;
   }
 
+  .logo.on .logo__link {
+    background-image: url(../../image/logo_m_w.png);
+  }
   .logo__link {
     background-image: url(../../image/logo_m.png);
     width: 71px;
@@ -251,7 +255,14 @@ button {
   .btn-toggle-menu {
     display: block;
     margin-left: auto;
+    margin-right: 3px;
+    outline: none;
     z-index: 1;
+  }
+  .btn-toggle-menu.on i {
+    background-image: url(../../image/btn_menu_close.png);
+    width: 14px;
+    height: 14px;
   }
   .btn-toggle-menu i {
     background: url(../../image/btn_menu.png) no-repeat center center;
@@ -261,17 +272,21 @@ button {
     height: 13px;
   }
 
+  /* Header - GNB */
   .gnb {
     display: none;
   }
 
   .gnb-mo {
     background-color: #f2f2f2;
-    display: block;
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+  }
+  .gnb-mo.on {
+    display: block;
   }
   .gnb-mo__top {
     background-color: #ed1c24;
@@ -292,6 +307,9 @@ button {
     line-height: 54px;
     border-bottom: 1px solid #e3e3e3;
   }
+  .gnb-mo__link-category.on i::after {
+    transform: rotate(-180deg);
+  }
   .gnb-mo__link-category i::after {
     content: "";
     background: url(../../image/gnb_1dep_off.png) no-repeat center center;
@@ -301,6 +319,13 @@ button {
     right: 25px;
     width: 11px;
     height: 6.5px;
+    transition: 0.3s;
+  }
+  .gnb-mo__sub-menu {
+    display: none;
+  }
+  .gnb-mo__link-category.on + .gnb-mo__sub-menu {
+    display: block;
   }
   .gnb-mo__link-sub-menu {
     position: relative;
@@ -309,6 +334,12 @@ button {
     padding-left: 20px;
     color: #666;
     line-height: 42px;
+  }
+  .gnb-mo__link-sub-menu.on {
+    color: #ed1c24;
+  }
+  .gnb-mo__link-sub-menu.on i::after {
+    background-image: url(../../image/gnb_2dep_minus.png);
   }
   .gnb-mo__link-sub-menu i::after {
     content: "";
@@ -322,7 +353,7 @@ button {
   }
   .gnb-mo__last-sub-menu {
     background-color: #f6f6f6;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     width: 100%;
     padding: 10px 20px;
@@ -341,6 +372,9 @@ button {
     left: 8px;
     width: 2px;
     height: 2px;
+  }
+  .gnb-mo__link-sub-menu.on ~ .gnb-mo__last-sub-menu {
+    display: flex;
   }
   .gnb-mo__link-last-sub {
     display: block;
@@ -398,7 +432,7 @@ button {
     background-color: #fff;
   }
   .gnb-mo__footer-sub-menu {
-    display: flex;
+    display: none;
     flex-wrap: wrap;
   }
   .gnb-mo__footer-sub-menu-item {
@@ -408,6 +442,9 @@ button {
   .gnb-mo__footer-sub-menu-item:nth-child(odd) {
     border-right: 1px solid #e3e3e3;
   }
+  .gnb-mo__link-footer.on ~ .gnb-mo__footer-sub-menu {
+    display: flex;
+  }
   .gnb-mo__link-footer {
     position: relative;
     display: block;
@@ -415,6 +452,12 @@ button {
     letter-spacing: -1px;
     line-height: 50px;
     border-bottom: 1px solid #e3e3e3;
+  }
+  .gnb-mo__link-footer.on {
+    color: #ed1c24;
+  }
+  .gnb-mo__link-footer.on i::after {
+    background-image: url(../../image/gnb_2dep_minus.png);
   }
   .gnb-mo__link-footer i::after {
     content: "";

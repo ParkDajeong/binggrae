@@ -1,5 +1,6 @@
 /* ============ 반응형 ============ */
 @media screen and (max-width: 767px) {
+  /* Header */
   .header {
     &__top {
       height: 44px;
@@ -20,6 +21,12 @@
   }
 
   .logo {
+    &.on {
+      .logo__link {
+        background-image: url(../../image/logo_m_w.png);
+      }
+    }
+
     &__link {
       background-image: url(../../image/logo_m.png);
       width: 71px;
@@ -30,7 +37,17 @@
   .btn-toggle-menu {
     display: block;
     margin-left: auto;
+    margin-right: 3px;
+    outline: none;
     z-index: 1;
+
+    &.on {
+      i {
+        background-image: url(../../image/btn_menu_close.png);
+        width: 14px;
+        height: 14px;
+      }
+    }
 
     i {
       background: url(../../image/btn_menu.png) no-repeat center center;
@@ -41,17 +58,23 @@
     }
   }
 
+  /* Header - GNB */
+
   .gnb {
     display: none;
   }
 
   .gnb-mo {
     background-color: #f2f2f2;
-    display: block;
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+
+    &.on {
+      display: block;
+    }
 
     &__top {
       background-color: $color-primary;
@@ -74,6 +97,12 @@
       line-height: 54px;
       border-bottom: 1px solid #e3e3e3;
 
+      &.on {
+        i::after {
+          transform: rotate(-180deg);
+        }
+      }
+
       i::after {
         content: "";
         background: url(../../image/gnb_1dep_off.png) no-repeat center center;
@@ -83,11 +112,16 @@
         right: 25px;
         width: 11px;
         height: 6.5px;
+        transition: 0.3s;
       }
     }
 
     &__sub-menu {
-      // display: none;
+      display: none;
+    }
+
+    &__link-category.on + &__sub-menu {
+      display: block;
     }
 
     &__link-sub-menu {
@@ -97,6 +131,14 @@
       padding-left: 20px;
       color: #666;
       line-height: 42px;
+
+      &.on {
+        color: $color-primary;
+
+        i::after {
+          background-image: url(../../image/gnb_2dep_minus.png);
+        }
+      }
 
       i::after {
         content: "";
@@ -112,7 +154,7 @@
 
     &__last-sub-menu {
       background-color: #f6f6f6;
-      display: flex;
+      display: none;
       flex-wrap: wrap;
       width: 100%;
       padding: 10px 20px;
@@ -133,6 +175,10 @@
           height: 2px;
         }
       }
+    }
+
+    &__link-sub-menu.on ~ &__last-sub-menu {
+      display: flex;
     }
 
     &__link-last-sub {
@@ -205,7 +251,7 @@
       }
 
       &-sub-menu {
-        display: flex;
+        display: none;
         flex-wrap: wrap;
 
         &-item {
@@ -217,6 +263,10 @@
           }
         }
       }
+
+      .gnb-mo__link-footer.on ~ &-sub-menu {
+        display: flex;
+      }
     }
 
     &__link-footer {
@@ -226,6 +276,14 @@
       letter-spacing: -1px;
       line-height: 50px;
       border-bottom: 1px solid #e3e3e3;
+
+      &.on {
+        color: $color-primary;
+
+        i::after {
+          background-image: url(../../image/gnb_2dep_minus.png);
+        }
+      }
 
       i::after {
         content: "";
