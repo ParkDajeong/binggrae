@@ -246,9 +246,15 @@ button {
   border-bottom: 1px solid #e3e3e3;
 }
 .footer__info {
-  margin-top: 9px;
+  margin-top: 6px;
   color: #666;
   letter-spacing: -1px;
+}
+.footer__info:first-child {
+  margin-top: 9px;
+}
+.footer__link--box {
+  margin-left: 10px;
 }
 .footer__bottom {
   display: flex;
@@ -266,6 +272,7 @@ button {
   color: #666;
   font-weight: 500;
   letter-spacing: -0.08px;
+  line-height: 32px;
 }
 .footer__sns-list {
   margin-left: auto;
@@ -277,7 +284,6 @@ button {
   padding: 12px 22px 0 10px;
   min-width: 115px;
   height: 27px;
-  margin-left: 10px;
   color: #444;
   font-weight: 500;
   line-height: 0;
@@ -548,6 +554,52 @@ button {
     width: 28px;
     width: 28px;
     margin: 0 auto;
+  }
+
+  /* Footer */
+  .footer {
+    position: relative;
+  }
+  .footer__inner {
+    padding: 25px 10px 30px;
+  }
+  .footer__content {
+    padding: 13px 0 0;
+    margin-top: 35px;
+    text-align: center;
+    border: none;
+    border-top: 1px solid #e3e3e3;
+  }
+  .footer__info {
+    margin-top: 3px;
+    font-size: 13px;
+  }
+  .footer__info:first-child {
+    margin-top: 9px;
+  }
+  .footer__bottom {
+    padding: 0;
+  }
+  .footer__link--box {
+    margin-left: 5px;
+  }
+  .footer__logo {
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    width: 101px;
+    height: 26px;
+    background-size: contain;
+  }
+  .footer__copyright {
+    padding: 0;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: normal;
+  }
+  .footer__sns-list {
+    display: none;
   }
 }
 html,

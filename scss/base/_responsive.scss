@@ -59,7 +59,6 @@
   }
 
   /* Header - GNB */
-
   .gnb {
     display: none;
   }
@@ -322,6 +321,62 @@
         width: 28px;
         margin: 0 auto;
       }
+    }
+  }
+
+  /* Footer */
+  .footer {
+    position: relative;
+
+    &__inner {
+      padding: 25px 10px 30px;
+    }
+
+    &__content {
+      padding: 13px 0 0;
+      margin-top: 35px;
+      text-align: center;
+      border: none;
+      border-top: 1px solid #e3e3e3;
+    }
+
+    &__info {
+      margin-top: 3px;
+      font-size: 13px;
+
+      &:first-child {
+        margin-top: 9px;
+      }
+    }
+
+    &__bottom {
+      // justify-content: center;
+      padding: 0;
+    }
+
+    &__link--box {
+      margin-left: 5px;
+    }
+
+    &__logo {
+      position: absolute;
+      top: 16px;
+      left: 18px;
+      width: 101px;
+      height: 26px;
+      background-size: contain;
+    }
+
+    &__copyright {
+      padding: 0;
+      margin: auto;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: normal;
+    }
+
+    &__sns-list {
+      display: none;
     }
   }
 }

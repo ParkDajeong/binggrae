@@ -16,9 +16,17 @@
   }
 
   &__info {
-    margin-top: 9px;
+    margin-top: 6px;
     color: #666;
     letter-spacing: -1px;
+
+    &:first-child {
+      margin-top: 9px;
+    }
+  }
+
+  &__link--box {
+    margin-left: 10px;
   }
 
   &__bottom {
@@ -39,6 +47,7 @@
     color: #666;
     font-weight: 500;
     letter-spacing: -0.08px;
+    line-height: 32px;
   }
 
   &__sns-list {
@@ -52,7 +61,6 @@
   padding: 12px 22px 0 10px;
   min-width: 115px;
   height: 27px;
-  margin-left: 10px;
   color: #444;
   font-weight: 500;
   line-height: 0;
