@@ -29,7 +29,13 @@
     margin-right: auto;
   }
 
-  &__link-util {
+  &__btn-toggle-menu {
+    // display: none;
+  }
+}
+
+.util {
+  &__link {
     position: relative;
     margin-right: 29px;
     color: #444;
@@ -51,10 +57,6 @@
       display: none;
     }
   }
-
-  &__btn-toggle-menu {
-    // display: none;
-  }
 }
 
 .logo {
@@ -72,21 +74,23 @@
   display: flex;
 
   &__link {
+    background: url() no-repeat center;
+    background-size: contain;
     display: block;
     width: 32px;
     height: 32px;
     margin: 0 7px;
 
     &--insta {
-      background: url(../../image/footer_instar.png) no-repeat center;
+      background-image: url(../../image/footer_instar.png);
     }
 
     &--youtube {
-      background: url(../../image/footer_youtube.png) no-repeat center;
+      background-image: url(../../image/footer_youtube.png);
     }
 
     &--kica {
-      background: url(../../image/ico_link_kica.png) no-repeat center;
+      background-image: url(../../image/ico_link_kica.png);
     }
   }
 }
