@@ -12,8 +12,31 @@ $(function() {
     $(".gnb-mo, .header__logo").toggleClass("on");
   });
 
+  // Mobile Dropmenu
   $(".gnb-mo__link--dropdown").on("click", function(e) {
     e.preventDefault();
     $(this).toggleClass("on");
+  });
+
+  // Slick Slide
+  $(".slide").slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+    infinite: true,
+    arrows: false, 
+    centerMode: true,
+    slidesToShow: 3,
+  });
+
+  // Slide Button-Pause
+  $(".slide-controller__btn-pause").on("click", function() {
+    if($(this).hasClass("paused")) {
+      $(".slide").slick("slickPlay");
+      $(this).text("일시정지");
+    } else {
+      $(".slide").slick("slickPause");
+      $(this).text("재생");
+    }
+    $(this).toggleClass("paused");
   });
 });
