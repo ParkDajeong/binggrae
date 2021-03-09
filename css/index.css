@@ -51,7 +51,6 @@ button {
 
 html,
 body {
-  background-color: lavender;
   font-family: "Noto Sans KR", sans-serif;
 }
 
@@ -282,6 +281,199 @@ body {
   display: none;
 }
 
+/* ============ Section - History ============ */
+.history {
+  background-color: #e9e9e9;
+  position: relative;
+}
+.history .section-title {
+  padding-bottom: 30px;
+}
+.history__visual {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.history__btns-wrap {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  display: flex;
+  z-index: 10;
+  transform: translateX(-50%);
+}
+.history__btn-product {
+  width: 80px;
+  height: 80px;
+  margin-right: 40px;
+  color: #888;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  outline: none;
+}
+.history__btn-product-01 {
+  padding-top: 5px;
+}
+.history__btn-product:last-child {
+  margin-right: 0;
+}
+.history__btn-product.active {
+  color: #fff;
+  font-weight: bold;
+}
+.history__btn-product-01.active {
+  background-color: #0b8249;
+}
+.history__btn-product-02.active {
+  background-color: #823b0b;
+}
+.history__btn-product-03.active {
+  background-color: #7aba0a;
+}
+.history__btn-product-04.active {
+  background-color: #f32539;
+}
+.history__btn-product-05.active {
+  background-color: #ff6e2e;
+}
+.history__product-cont {
+  position: relative;
+  height: 590px;
+  padding-bottom: 80px;
+  box-sizing: content-box;
+}
+.history__product-cont--banana .history__product-name {
+  color: #0b8249;
+}
+.history__product-cont--banana .slide-fade__img {
+  padding-left: 44px;
+}
+.history__product-cont--banana .history__product-point {
+  background: url(../../image/product/bg_main_prdpoint_01.png) no-repeat left 8px;
+  position: absolute;
+  right: 130px;
+  bottom: 165px;
+  padding-left: 80px;
+}
+.history__product-name {
+  font-family: "Binggrae", sans-serif;
+  font-size: 24px;
+}
+.history__product-name em {
+  display: inline-block;
+  margin-left: 2px;
+  font-size: 14px;
+  font-style: normal;
+}
+.history__product-desc {
+  margin-top: 6px;
+  color: #666;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.slide-fade__item {
+  position: relative;
+  min-height: 590px;
+  height: 100%;
+}
+.slide-fade__product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slide-fade__bg-txt-year {
+  display: none;
+}
+
+.slide-navigation {
+  position: absolute;
+  top: 100px;
+  left: 13px;
+}
+.slide-navigation__bar {
+  background-color: #ed1c24;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 2px;
+  z-index: 1;
+  transition: 0.8s;
+}
+.slide-navigation .slick-dots {
+  position: relative;
+}
+.slide-navigation .slick-dots::before {
+  content: "";
+  background-color: #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  max-height: 368px;
+}
+.slide-navigation .slick-dots li {
+  position: relative;
+  margin-top: 67px;
+}
+.slide-navigation .slick-dots li:first-child {
+  top: -9px;
+  margin-top: 0;
+}
+.slide-navigation .slick-dots li:last-child {
+  top: 9px;
+}
+.slide-navigation .slick-dots li.on .slide-navigation__dot::after {
+  background-color: #ed1c24;
+}
+.slide-navigation .slick-dots li.slick-active {
+  transition: 0.5s;
+}
+.slide-navigation .slick-dots li.slick-active .slide-navigation__dot {
+  color: #ed1c24;
+}
+.slide-navigation .slick-dots li.slick-active .slide-navigation__dot::before {
+  transform: translateY(-50%) scale(1);
+}
+.slide-navigation .slick-dots li.slick-active .slide-navigation__dot::after {
+  background-color: #ed1c24;
+}
+.slide-navigation .slick-dots .slide-navigation__dot {
+  position: relative;
+  margin-left: 18px;
+  padding-top: 2px;
+  color: #333;
+  font-weight: bold;
+  outline: none;
+}
+.slide-navigation .slick-dots .slide-navigation__dot::before {
+  content: "";
+  background-color: rgba(237, 28, 36, 0.3);
+  position: absolute;
+  top: 50%;
+  left: -28px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  transition: 0.3s;
+  transform: translateY(-50%) scale(0);
+}
+.slide-navigation .slick-dots .slide-navigation__dot::after {
+  content: "";
+  background-color: #ccc;
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
 /* ============ Section - Stroy ============ */
 .story {
   background-color: #ffec48;
@@ -346,7 +538,7 @@ body {
   background: url(../../image/btn_slide_stop.png) no-repeat center center;
   position: absolute;
   top: -7px;
-  right: -90px;
+  right: -95px;
   width: 11px;
   height: 14px;
   font-size: 1px;

@@ -17,8 +17,57 @@ $(function() {
     e.preventDefault();
     $(this).toggleClass("on");
   });
+
+  // Section History - Product Button
+  $(".history__btn-product").on("click", function() {
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+  });
+
+  // Section History - Slide
+  $(".slide-fade").on("beforeChange", function(_event, slick, current, next){
+    const length = slick.$slides.length;
+    $(".slide-navigation__bar").css("height", `${(100 / (length - 1)) * next}%`);
+    if(next === 0) {
+      $(".slide-navigation .slick-dots li").removeClass("on");
+    } else {
+      $(".slide-navigation .slick-dots li").eq(current).addClass("on");
+    }
+  });
+
+  $(document).on("click", ".slide-navigation .slick-dots li", function() {
+    $(this).prevAll().addClass("on");
+    $(this).nextAll().removeClass("on");
+  });
+
+  $(".slide-fade").slick({
+    autoplay: true,
+    autoplaySpeed: 4000,
+    infinite: true,
+    dots: true,
+    arrows: false,
+    fade: true,
+    pauseOnHover: false,
+    draggable: false,
+    appendDots: $(".slide-navigation"),
+    customPaging: function(slide, i) {
+      const elm = slide.$slides[i];
+      const year = $(elm).data("year");
+
+      return `<button class="slide-navigation__dot">${year}</button>`;
+    },
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          dots: false,
+          slidesToShow: 1,
+        }
+      },
+    ],
+  });
   
-  // Slick Slide
+  // Section Stroy - Slide
   $(".story__slide").on("init", function(_event, _slick){
     $(".slick-active .slide-controller__tab").addClass("active");
   });
@@ -26,7 +75,7 @@ $(function() {
   $(".story__slide").on("beforeChange", function(_event, _slick, _current, next){
     if(next % 3 === 0) {
       $(".slide-controller__tab").removeClass("active");
-      $(".slick-dots li").eq(next).find(".slide-controller__tab").addClass("active");
+      $(".slide-controller .slick-dots li").eq(next).find(".slide-controller__tab").addClass("active");
     }
     $(".slide-controller__page em").text(next+1);
   });
@@ -61,7 +110,7 @@ $(function() {
     ],
   });
 
-  // Slide Button-Pause
+  // Section Story Slide - Button Pause
   $(".slide-controller__btn-pause").on("click", function() {
     if($(this).hasClass("paused")) {
       $(".slide").slick("slickPlay");
