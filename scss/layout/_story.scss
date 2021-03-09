@@ -67,11 +67,15 @@
   width: 690px;
   margin: 85px auto 0;
 
+  &__page {
+    display: none;
+  }
+
   &__btn-pause {
     background: url(../../image/btn_slide_stop.png) no-repeat center center;
     position: absolute;
-    top: 50%;
-    right: -96px;
+    top: -7px;
+    right: -90px;
     width: 11px;
     height: 14px;
     font-size: 1px;
@@ -80,6 +84,49 @@
 
     &.paused {
       background-image: url(../../image/btn_slide_play.png);
+    }
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: space-between;
+    height: 2px;
+    background-color: #fff6a4;
+
+    li {
+      position: relative;
+      display: none;
+      width: 10px;
+      height: 10px;
+
+      &:nth-child(3n-2) {
+        display: block;
+      }
+    }
+  }
+
+  &__tab {
+    background-color: $color-white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    color: transparent;
+    border-radius: 50%;
+    outline: none;
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    transition: 0.2s;
+
+    &.active {
+      width: 160px;
+      height: 50px;
+      color: $color-primary;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 50px;
+      border-radius: 25px;
     }
   }
 }

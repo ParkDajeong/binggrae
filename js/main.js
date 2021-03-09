@@ -17,15 +17,48 @@ $(function() {
     e.preventDefault();
     $(this).toggleClass("on");
   });
-
+  
   // Slick Slide
+  $(".story__slide").on("init", function(_event, _slick){
+    $(".slick-active .slide-controller__tab").addClass("active");
+  });
+  
+  $(".story__slide").on("beforeChange", function(_event, _slick, _current, next){
+    if(next % 3 === 0) {
+      $(".slide-controller__tab").removeClass("active");
+      $(".slick-dots li").eq(next).find(".slide-controller__tab").addClass("active");
+    }
+    $(".slide-controller__page em").text(next+1);
+  });
+  
+  const tabStrArr = ["보도자료", "공지사항", "빙그레 영상", "글로벌 빙그레", "사회공헌"];
+  let tabIdx = 0;
+
   $(".slide").slick({
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     infinite: true,
+    dots: true,
     arrows: false, 
     centerMode: true,
     slidesToShow: 3,
+    pauseOnHover: false,
+    appendDots: $(".slide-controller"),
+    customPaging: function(_slide, i) {
+      if(i % 3 === 0) {
+        return `<button class="slide-controller__tab">${tabStrArr[tabIdx++]}</button>`;
+      }
+      return `<button class="slide-controller__tab"></button>`;
+    },
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          dots: false,
+          slidesToShow: 1,
+        }
+      },
+    ],
   });
 
   // Slide Button-Pause
