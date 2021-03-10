@@ -25,6 +25,21 @@ $(function() {
   });
 
   // Section History - Slide
+  let timer = null;
+  function animateRollingNum() {
+    const od = new Odometer({
+      el: $(".num-count"),
+      value: 1991,
+      thema: "minimal",
+      duration: 3000,
+    });
+    od.update(1991);
+    // $(".num-count").innerHTML = 123;
+
+  //   setTimeout(function(){
+  //     $(".num-count").innerHTML = 123;
+  // }, 100);
+  }
   $(".slide-fade").on("beforeChange", function(_event, slick, current, next){
     const length = slick.$slides.length;
     $(".slide-navigation__bar").css("height", `${(100 / (length - 1)) * next}%`);
@@ -33,6 +48,15 @@ $(function() {
     } else {
       $(".slide-navigation .slick-dots li").eq(current).addClass("on");
     }
+    // clearInterval(timer);
+  });
+
+
+  $(".slide-fade").on("afterChange", function(_event, slick, current) {
+    // animateRollingNum();
+    setTimeout(function(){
+    }, 1000);
+    $('#odometer').html(1990);
   });
 
   $(document).on("click", ".slide-navigation .slick-dots li", function() {
@@ -47,6 +71,7 @@ $(function() {
     dots: true,
     arrows: false,
     fade: true,
+    cssEase: "linear",
     pauseOnHover: false,
     draggable: false,
     appendDots: $(".slide-navigation"),

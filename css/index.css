@@ -357,6 +357,9 @@ body {
   bottom: 165px;
   padding-left: 80px;
 }
+.history__year {
+  color: #0b8249;
+}
 .history__product-name {
   font-family: "Binggrae", sans-serif;
   font-size: 24px;
@@ -387,6 +390,21 @@ body {
 }
 .slide-fade__bg-txt-year {
   display: none;
+}
+
+.year {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 372px;
+  overflow: hidden;
+  transform: translate(-50%, -60%);
+}
+.year .num-count {
+  font-family: "Binggrae-Bold", sans-serif;
+  font-size: 266px;
+  font-weight: 500;
 }
 
 .slide-navigation {
@@ -429,9 +447,6 @@ body {
 }
 .slide-navigation .slick-dots li.on .slide-navigation__dot::after {
   background-color: #ed1c24;
-}
-.slide-navigation .slick-dots li.slick-active {
-  transition: 0.5s;
 }
 .slide-navigation .slick-dots li.slick-active .slide-navigation__dot {
   color: #ed1c24;

@@ -93,6 +93,10 @@
     }
   }
 
+  &__year {
+    color: #0b8249;
+  }
+
   &__product-name {
     font-family: "Binggrae", sans-serif;
     font-size: 24px;
@@ -129,6 +133,25 @@
 
   &__bg-txt-year {
     display: none;
+  }
+}
+
+.year {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 372px;
+  overflow: hidden;
+  transform: translate(-50%, -60%);
+
+  .num-count {
+    // position: relative;
+    // display: inline-block;
+    // width: 150px;
+    font-family: "Binggrae-Bold", sans-serif;
+    font-size: 266px;
+    font-weight: 500;
   }
 }
 
@@ -183,8 +206,6 @@
       }
 
       &.slick-active {
-        transition: 0.5s;
-
         .slide-navigation__dot {
           color: $color-primary;
 
